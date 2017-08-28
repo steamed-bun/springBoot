@@ -1,6 +1,8 @@
 package com.coocaa.springBoot.exception;
 
 
+import com.coocaa.springBoot.enums.ResultEnum;
+
 public class UserException extends RuntimeException{
 
     private Integer code;
@@ -8,9 +10,9 @@ public class UserException extends RuntimeException{
     public UserException() {
     }
 
-    public UserException(String message, Integer code) {
-        super(message);
-        this.code = code;
+    public UserException(ResultEnum resultEnum) {
+        super(resultEnum.getMsg());
+        this.code = resultEnum.getCode();
     }
 
     public Integer getCode() {

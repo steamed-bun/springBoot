@@ -1,6 +1,7 @@
 package com.coocaa.springBoot.service;
 
 import com.coocaa.springBoot.domain.User;
+import com.coocaa.springBoot.enums.ResultEnum;
 import com.coocaa.springBoot.exception.UserException;
 import com.coocaa.springBoot.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +18,14 @@ public class UserService {
         User user = userRepository.findOne(id);
         Integer age = user.getAge();
         if (age < 10 ){
-            throw new UserException("你已经是一个漂亮的蓝孩子啦...", 100);
+            throw new UserException(ResultEnum.PRIMARY_SCHOOL);
         }else if (age > 10 && age < 20){
-            throw new UserException("何不画上漂亮的眼影~...", 200);
+            throw new UserException(ResultEnum.MIDDLE_SCHOOL);
         }
+    }
+
+    public User findOne(Integer id){
+        return userRepository.findOne(id);
     }
 
 }
