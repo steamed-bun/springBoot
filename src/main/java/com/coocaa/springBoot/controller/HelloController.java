@@ -39,7 +39,7 @@ public class HelloController {
         return userRepository.findAll();
     }
 
-    @PostMapping(value = "addUser")
+    @RequestMapping(value = "addUser")
     public Result addUser(@Valid User user, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             return ResultUtil.error(0,bindingResult.getFieldError().getDefaultMessage());
