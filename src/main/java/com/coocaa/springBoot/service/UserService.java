@@ -1,6 +1,7 @@
 package com.coocaa.springBoot.service;
 
 import com.coocaa.springBoot.domain.User;
+import com.coocaa.springBoot.enums.GirlEnum;
 import com.coocaa.springBoot.enums.ResultEnum;
 import com.coocaa.springBoot.exception.UserException;
 import com.coocaa.springBoot.repository.UserRepository;
@@ -20,7 +21,7 @@ public class UserService {
         if (age < 10 ){
             throw new UserException(ResultEnum.PRIMARY_SCHOOL);
         }else if (age > 10 && age < 20){
-            throw new UserException(ResultEnum.MIDDLE_SCHOOL);
+            throw new UserException(GirlEnum.MIDDLE_SCHOOL);
         }
     }
 

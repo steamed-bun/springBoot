@@ -1,6 +1,6 @@
 package com.coocaa.springBoot.enums;
 
-public enum ResultEnum {
+public enum ResultEnum implements BaseEnum{
 
 
     PRIMARY_SCHOOL(100,"你已经是一个漂亮的蓝孩子啦..."),
@@ -16,6 +16,7 @@ public enum ResultEnum {
         this.msg = msg;
     }
 
+    @Override
     public Integer getCode() {
         return code;
     }
@@ -24,6 +25,7 @@ public enum ResultEnum {
         this.code = code;
     }
 
+    @Override
     public String getMsg() {
         return msg;
     }
