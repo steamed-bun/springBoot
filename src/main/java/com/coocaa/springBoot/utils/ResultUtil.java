@@ -1,6 +1,7 @@
 package com.coocaa.springBoot.utils;
 
 import com.coocaa.springBoot.domain.Result;
+import com.coocaa.springBoot.enums.BaseEnum;
 
 public class ResultUtil {
 
@@ -20,6 +21,22 @@ public class ResultUtil {
         Result result = new Result();
         result.setCode(code);
         result.setMsg(msg);
+        result.setData(null);
+        return result;
+    }
+
+    public static Result success(BaseEnum baseEnum,Object object){
+        Result result = new Result();
+        result.setCode(baseEnum.getCode());
+        result.setMsg(baseEnum.getMsg());
+        result.setData(object);
+        return result;
+    }
+
+    public static Result error(BaseEnum baseEnum){
+        Result result = new Result();
+        result.setCode(baseEnum.getCode());
+        result.setMsg(baseEnum.getMsg());
         result.setData(null);
         return result;
     }

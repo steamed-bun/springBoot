@@ -2,6 +2,7 @@ package com.coocaa.springBoot.controller;
 
 import com.coocaa.springBoot.domain.Result;
 import com.coocaa.springBoot.domain.User;
+import com.coocaa.springBoot.enums.GirlEnum;
 import com.coocaa.springBoot.repository.UserRepository;
 import com.coocaa.springBoot.service.UserService;
 import com.coocaa.springBoot.utils.ResultUtil;
@@ -26,25 +27,21 @@ public class HelloController {
             userService.getAge(id);
     }
 
-
-
-    @GetMapping(value = "/test1")
-    public String test1(){
-        System.out.println("test1");
-        return "test1";
-    }
-
     @GetMapping(value = "/getUsers")
     public List<User> getUsers(){
         return userRepository.findAll();
     }
 
+    /**
+     * 可以进行 JSR-303 验证的测试
+     * @param user 注册用户
+     * @param bindingResult 验证参数结果,此参数不能少
+     * @return result
+     */
     @RequestMapping(value = "addUser")
     public Result addUser(@Valid User user, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
-            return ResultUtil.error(0,bindingResult.getFieldError().getDefaultMessage());
-        }
-        return ResultUtil.success(userRepository.save(user));
+        System.out.println(user);
+        return ResultUtil.success(GirlEnum.SUCCESS,userRepository.save(user));
     }
 
     @GetMapping(value = "/getUser/{id}")

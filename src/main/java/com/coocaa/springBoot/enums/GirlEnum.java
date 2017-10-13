@@ -4,7 +4,8 @@ public enum  GirlEnum implements BaseEnum{
 
     PRIMARY_SCHOOL(100,"你已经是一个帅气的女孩子啦..."),
     MIDDLE_SCHOOL(200,"何不去剪一个纯粹的圆寸^_^..."),
-    UNKNOW(-1,"未知错误")
+    UNKNOW(-1,"未知错误"),
+    SUCCESS(1,"成功啦~")
             ;
 
     private Integer code;

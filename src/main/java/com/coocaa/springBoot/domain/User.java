@@ -1,9 +1,14 @@
 package com.coocaa.springBoot.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -12,20 +17,13 @@ public class User {
     @GeneratedValue
     private Integer id;
 
-//    @Pattern(regexp = "(腾讯源|爱奇艺源|爱奇艺\\+优朋混合源)", message = "必须是腾讯源、爱奇艺源、爱奇艺+优朋混合源")
-//    @Pattern(regexp = "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]\\d|3[0-1]) ([0-1]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$")
+    @NotEmpty(message = "{user.name}")
     private String name;
 
-    @Min(value = 12, message = "年龄问题...")
+    @Min(value = 12, message = "{user.age}")
     private Integer age;
 
-    @NotNull(message = "钱必须给...")
-//    @Min(value = 0, message = "money 不能大于一")
-
-    @Min(value = 0, message = "min")
-    @Max(value = 1, message = "max")
-//    @Range(min = 0, max = 0 , message = "money 不能大于1也不能小于0")
-    @Digits(integer = 1,fraction = 2, message = "money精度不正确")
+    @Digits(integer = 1,fraction = 2, message = "{user.money.patter}")
     private Float money;
 
     @Override

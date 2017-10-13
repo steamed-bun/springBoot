@@ -1,4 +1,4 @@
-package com.coocaa.springBoot;
+package com.coocaa.springBoot.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
