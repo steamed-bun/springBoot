@@ -23,7 +23,8 @@ public class HelloController {
     private UserService userService;
 
     @GetMapping(value = "/getAge/{id}")
-    public void getAge(@PathVariable("id") Integer id) throws Exception{
+    public void getAge(@PathVariable("id") Integer id, String test) throws Exception{
+        System.out.println(test);
             userService.getAge(id);
     }
 
