@@ -24,4 +24,7 @@ springBoot example
 
 注意：即使使用了 aop 处理,bindingResult依旧不能少,而且必须紧跟在被验证的参数后面
 
+test233333
+
+
 test
