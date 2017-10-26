@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class HttpAspect {
 
+    //多测试一点
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
     @Pointcut("execution(public * com.coocaa.springBoot.controller.HelloController.addUser(..))")
