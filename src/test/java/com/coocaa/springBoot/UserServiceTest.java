@@ -21,6 +21,7 @@ public class UserServiceTest {
         User user = userService.findOne(11);
         Assert.assertEquals(new Integer(9), user.getAge());
         System.out.println("冲突");
+        System.out.println("冲突1");
     }
 
 }

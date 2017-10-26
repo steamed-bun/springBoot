@@ -12,6 +12,7 @@ public class ApplicationTests {
 	@Test
 	public void contextLoads() {
 		System.out.println("冲突");
+		System.out.println("冲突2");
 	}
 
 }
