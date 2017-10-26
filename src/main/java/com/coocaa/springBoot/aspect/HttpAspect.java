@@ -28,7 +28,7 @@ public class HttpAspect {
     public void doBefore(JoinPoint joinPoint){
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-
+        System.out.println("chongt");
         logger.info("url={}",request.getRequestURL());
         logger.info("methor={}",request.getMethod());
         logger.info("ip={}",request.getRemoteAddr());
