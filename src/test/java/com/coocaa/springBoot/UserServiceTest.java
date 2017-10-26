@@ -20,10 +20,6 @@ public class UserServiceTest {
     public void findOneTest(){
         User user = userService.findOne(11);
         Assert.assertEquals(new Integer(9), user.getAge());
-        System.out.println("冲突");
-        System.out.println("冲突1");
-        System.out.println("aaaaaaaaaaaa.......");
-        System.out.println("cccc...");
     }
 
 }
