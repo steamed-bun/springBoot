@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="2c174d37-cd4b-4640-a707-c1312e1e6e85" name="list1" comment="list1" />
-    <list default="true" id="9535d613-2597-465e-ba90-bda768af924b" name="Default" comment="合并冲突3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/coocaa/springBoot/Git.java" />
+    <list default="true" id="9535d613-2597-465e-ba90-bda768af924b" name="Default" comment="测试分支">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="springBoot.iws" />
@@ -859,7 +858,7 @@
       <workItem from="1516200296930" duration="622000" />
       <workItem from="1516238726543" duration="625000" />
       <workItem from="1516255352967" duration="29000" />
-      <workItem from="1517455733840" duration="275000" />
+      <workItem from="1517455733840" duration="1176000" />
     </task>
     <task id="LOCAL-00001" summary="springBoot">
       <created>1503657574019</created>
@@ -980,7 +979,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509012536465</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="测试分支">
+      <created>1517456037889</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1517456037889</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1004,7 +1010,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123486000" />
+    <option name="totallyTimeSpent" value="124387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1147,7 +1153,8 @@
     <MESSAGE value="再来一波~2" />
     <MESSAGE value="撤销合并3" />
     <MESSAGE value="彻底恢复现场" />
-    <option name="LAST_COMMIT_MESSAGE" value="彻底恢复现场" />
+    <MESSAGE value="测试分支" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试分支" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
