@@ -47,7 +47,7 @@ public class HelloController {
 
     @GetMapping(value = "/getUser/{id}")
     public User getUser(@PathVariable("id") Integer id){
-        return userRepository.findOne(id);
+        return null;
     }
 
     @PutMapping(value = "/updateUser/{id}")
@@ -65,7 +65,6 @@ public class HelloController {
 
     @DeleteMapping(value = "/deleteUser/{id}")
     public void deleteUser(@PathVariable("id") Integer id){
-        userRepository.delete(id);
     }
 
     @GetMapping(value = "/getUserByAge/{age}")

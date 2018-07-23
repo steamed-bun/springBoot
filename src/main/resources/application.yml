@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/springBoot
+      url: jdbc:mysql://127.0.0.1:3306/springBoot?useSSL=false
       username: root
-      password: root
+      password: root8888
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,3 +14,7 @@ spring:
 #国际化文件指定位置、顺序, 其主要是为了方便在properties中定义错误信息,这个顺序是引用的顺序
   messages:
     basename: i18n/ValidationMessageszh_CN,i18n/ValidationMessagesen,i18n/ValidationMessages
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: test-consumer-group

@@ -16,7 +16,7 @@ public class UserService {
 
     public void getAge(Integer id) throws Exception{
 
-        User user = userRepository.findOne(id);
+        User user = new User();
         Integer age = user.getAge();
         if (age < 10 ){
             throw new UserException(ResultEnum.PRIMARY_SCHOOL);
@@ -26,7 +26,7 @@ public class UserService {
     }
 
     public User findOne(Integer id){
-        return userRepository.findOne(id);
+        return null;
     }
 
 }
