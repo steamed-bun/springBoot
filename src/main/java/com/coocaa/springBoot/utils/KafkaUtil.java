@@ -29,6 +29,7 @@ public class KafkaUtil {
     @ResponseBody
     public Result sendMessage(String topic, String data) {
         template.send(topic, data);
+        System.out.println("test");
         return ResultUtil.success();
     }
 
